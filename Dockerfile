@@ -8,4 +8,6 @@ RUN apk update \
  && apk upgrade \
  && apk add --no-cache \
             lftp \
- && rm -rf /var/cache/apk/*
+            ca-certificates \
+ && rm -rf /var/cache/apk/* \
+ && update-ca-certificates 
